@@ -1,14 +1,42 @@
 import React, { useState } from 'react';
 import logo from '../images/LasBite.png';
 import './login.css';
-
+import {auth, provider, facebookProvider} from './config';
+import { signInWithPopup } from "firebase/auth";
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
     // create state variables for each input
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
+// google sign in 
+const [value, setValue] = useState('')
+    const signInWithGoogle =()=>{
+        signInWithPopup(auth,provider).then((data)=>{
+            setValue(data.user.email)
+            // localStorage.setItem("email",data.user.email)
+            navigate('/home');
+        })
+    }
+
+    // useEffect(()=>{
+    //     setValue(localStorage.getItem('email'))
+    // }, [])
+// sign in with facebook
+    const signInWithFacebook =()=>{
+        signInWithPopup(auth,facebookProvider).then((data)=>{
+            setValue(data.user.email)
+            navigate('/home');
+        })
+    }
+
+    // useEffect(()=>{
+    //     setValue(localStorage.getItem('email'))
+    // }, [])
     // handle email change
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
@@ -43,8 +71,8 @@ const Login = () => {
             </div>
             <p>Or Login With</p>
             <div className="social">
-                <button>Facebook</button>
-                <button>Google</button>
+                <button onClick={signInWithFacebook}>Facebook</button>
+                <button onClick={signInWithGoogle}>Google</button>
             </div>
             <p>Don't have an account? <span>Sign Up</span></p>
         </div>
