@@ -83,8 +83,8 @@ Account</div>
                 <div className="line"></div>
             </div>
             <div className="social">
-                <button>Facebook</button>
-                <button>Google</button>
+                <button onClick={signInWithFacebook}><img src={f} alt='Facebook'/> Facebook</button>
+                <button onClick={signInWithGoogle}> <img src={g} alt='Google'/> Google</button>
             </div>
         </div>
     )
