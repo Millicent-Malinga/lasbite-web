@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import logo from '../images/LasBite.png';
+import g from '../images/google.png';
+import f from '../images/facebook.png';
+import i from '../images/Intersect.png';
 import './login.css';
 import {auth, provider, facebookProvider} from './config';
 import { signInWithPopup } from "firebase/auth";
@@ -56,6 +59,11 @@ const [value, setValue] = useState('')
     //  create and return the login form
     return (
         <div className="container">
+            <div className="d">
+                <img src={i} alt="intersect" />
+                <div className="d1">Sign in to your
+Account</div>
+            </div>
             <div className="logo">
                 <img src={logo} alt="logo" />
             </div>
@@ -69,12 +77,15 @@ const [value, setValue] = useState('')
                     <button>Login</button>
                 </form>
             </div>
-            <p>Or Login With</p>
-            <div className="social">
-                <button onClick={signInWithFacebook}>Facebook</button>
-                <button onClick={signInWithGoogle}>Google</button>
+            <div className="or">
+                <div className="line"></div>
+                <p>Or Login With</p>
+                <div className="line"></div>
             </div>
-            <p>Don't have an account? <span>Sign Up</span></p>
+            <div className="social">
+                <button>Facebook</button>
+                <button>Google</button>
+            </div>
         </div>
     )
 }
