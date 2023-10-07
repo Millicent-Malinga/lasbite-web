@@ -191,8 +191,19 @@
     .d1 {
         position: absolute;
         margin-top: 30%;
-        font-size: 40px;
+        font-size: 35px;
+        margin-left: 7px;
         font-weight: bolder;
+        text-align: left;
+        color: white;
+    }
+
+    .d2 {
+        position: absolute;
+        margin-top: 50%;
+        margin-left: 7px;
+        font-size: 20px;
+        font-weight:100;
         text-align: left;
         color: white;
     }
