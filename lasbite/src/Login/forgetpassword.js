@@ -9,20 +9,21 @@ const ForgetPassword = () => {
     //  create and return the login form
     return (
         <div className="container">
-            <div className="d">
-                <img src={i} alt="intersect" />
-                <div className="d1">Forgot Password?</div>
-                <div className="d2">Enter your email address to reset password</div>
-            </div>
-            <div className="logo">
-                <img src={logo} alt="logo" />
-            </div>
-            <div className="Form">
-                <form onSubmit="">
-                    <label htmlFor="email">Email</label>
-                    <input type="email" id="email"/>
-                    <button>Continue</button>
-                </form>
+            <div className="body">
+                <div className='circle'>
+                    <div className='circle1'></div>
+                    <div className='circle2'></div>
+                </div>
+                <div className="logo">
+                    <img src={logo} alt="logo" />
+                </div>
+                <div className="Form">
+                    <form onSubmit="">
+                        <label htmlFor="email">Email</label>
+                        <input type="email" id="email" />
+                        <button>Continue</button>
+                    </form>
+                </div>
             </div>
         </div>
     )

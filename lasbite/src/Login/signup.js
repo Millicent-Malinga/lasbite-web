@@ -28,30 +28,31 @@ const SignUp = () => {
 
     //  create and return the login form
     return (
-        <div className="container">
-            <div className="d">
-                <img src={i} alt="intersect" />
-                <div className="d1">Sign Up</div>
-                <div className="d2">Create your account</div>
+        <div className="body">
+            <div className='circle'>
+                <div className='circle1'></div>
+                <div className='circle2'></div>
             </div>
-            <div className="logo">
-                <img src={logo} alt="logo" />
-            </div>
-            <div className="Form">
-                <form onSubmit={handleSubmit}>
-                    <label htmlFor="fullname">Fullname</label>
-                    <input type="fullname" id="fullname"/>
-                    <label htmlFor="email">Email</label>
-                    <input type="email" id="email"/>
-                    <label htmlFor="password">Password</label>
-                    <input type="password" id="password"/>
-                    <label htmlFor="confirm_password">Confirm Password</label>
-                    <input type="confirm_password" id="confirm_password"/>
-                    <button>Register</button>
-                </form>
-            </div>
-            <div className="Register">
-                <p>Already have an account? <span>Sign In</span></p>
+            <div className="container">
+                <div className="logo">
+                    <img src={logo} alt="logo" />
+                </div>
+                <div className="Form">
+                    <form onSubmit={handleSubmit}>
+                        <label htmlFor="fullname">Fullname</label>
+                        <input type="fullname" id="fullname" />
+                        <label htmlFor="email">Email</label>
+                        <input type="email" id="email" />
+                        <label htmlFor="password">Password</label>
+                        <input type="password" id="password" />
+                        <label htmlFor="confirm_password">Confirm Password</label>
+                        <input type="confirm_password" id="confirm_password" />
+                        <button>Register</button>
+                    </form>
+                </div>
+                <div className="Register">
+                    <p>Already have an account? <span>Sign In</span></p>
+                </div>
             </div>
         </div>
     )

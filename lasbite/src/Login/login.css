@@ -1,4 +1,18 @@
+.body {
+    margin: 0;
+    padding: 0;
+    background-color: #121f05;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+
 .container {
+    background-color: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(10px);
     margin: auto;
     margin-top: 10vh;
     align-self: center;
@@ -7,11 +21,43 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-    width: 40%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid rgb(169, 169, 169);
+    max-width: 400px; 
+    width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
-.d {
-    display: none;
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.circle1 {
+    border-radius: 100%;
+    background-color: aqua;
+    position: absolute;
+    top: 5%;
+    left: 27%;
+    width: 150px;
+    height: 150px;
+}
+
+.circle2 {
+    border-radius: 100%;
+    background-color: pink;
+    position: absolute;
+    bottom: 3%;
+    right: 27%;
+    width: 150px;
+    height: 150px;
 }
 
 
@@ -24,39 +70,42 @@
 .Form {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 70%;
     padding-right: 25px;
 }
 
 .Form label {
-    margin-top: 20px;
+    margin-top: 17px;
     display: block;  
-    color: #929292;  
+    color: white;  
 }
   
 .Form input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border-radius: 8px;
+    border: 0;
     margin-top: 5px;
+    background-color: #92929238;
 }
   
 .Form p {
     width: calc(100% + 23px);
     margin-top: 5px;
     margin-bottom: 15px;
-    color: #356308;
+    color: white;
     font-size: 13px;
     font-weight: 600;
+    font-style: italic;
     text-align: right;
 }
 
 .Form button {
     width: calc(100% + 23px);
-    padding: 18px;
+    padding: 15px;
     border-radius: 8px;
-    margin-top: 20px;
-    background-color: #87A245;
+    margin-top: 5px;
+    background-color: white;
     color: black;
     font-size: 16px;
     font-weight: 600;
@@ -65,8 +114,8 @@
 }
 
 .or {
-    width: 100%;
-    margin-top: 20px;
+    width: 70%;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,8 +129,8 @@
 }
 
 .social {
-    width: 50%;
-    margin-top: 15px;
+    width: 70%;
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -99,10 +148,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    width: 45%;
+    width: 47%;
     padding: 10px;
     justify-content: space-evenly;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.393);
     border-radius: 8px;
     border: 1px solid #929292;
     cursor: pointer;
@@ -110,25 +159,24 @@
 }
 
 .Register p {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #929292;
+    margin-top: 15px;
+    font-size: 17px;
+    color: white;
 }
 
 .Register p span {
-    color: #356308;
+    color: black;
     font-weight: bold;
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .container {
-        width: 80%;
+        width: 100%;
+        height: 100%;
+        overflow-x: none;
         margin-top: 0;
-    }
-
-    .logo img {
-        width: 100px;
+        border: 0px
     }
 
     .Form button {
@@ -179,36 +227,11 @@
     .Register p span {
         font-size: 14px;
     }
-    .d {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        margin-bottom: 20px;
-        margin-top: 0;
-    }
 
-    .d1 {
-        position: absolute;
-        margin-top: 30%;
-        font-size: 35px;
-        margin-left: 7px;
-        font-weight: bolder;
-        text-align: left;
-        color: white;
-    }
-
-    .d2 {
-        position: absolute;
-        margin-top: 50%;
-        margin-left: 7px;
-        font-size: 20px;
-        font-weight:100;
-        text-align: left;
-        color: white;
-    }
-
-    .logo img {
+    .circle {
         display: none;
     }
+
+    
+
 }
