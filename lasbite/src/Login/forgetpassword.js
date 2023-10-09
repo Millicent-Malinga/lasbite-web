@@ -8,12 +8,8 @@ const ForgetPassword = () => {
 
     //  create and return the login form
     return (
-        <div className="container">
-            <div className="body">
-                <div className='circle'>
-                    <div className='circle1'></div>
-                    <div className='circle2'></div>
-                </div>
+        <div className="body">
+            <div className="container">
                 <div className="logo">
                     <img src={logo} alt="logo" />
                 </div>

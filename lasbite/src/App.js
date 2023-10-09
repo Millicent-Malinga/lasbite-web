@@ -7,8 +7,8 @@ import ForgetPassword from './Login/forgetpassword';
 // function App() {
 //   return (
 //     <div className="App">
-//       {/* <Login /> */}
-//       {/* <SignUp /> */}
+      {/* <Login /> */}
+      // { <SignUp /> }
 //       <ForgetPassword />
 //     </div>
 // import Home from './Login/Home';
@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       {/* <Login /> */}
       {/* <SignUp /> */}
-      {/* <ForgetPassword /> */}
+      <ForgetPassword />
     </div>
 // // import Home from './Login/Home';
 
